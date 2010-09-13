@@ -1,14 +1,11 @@
 package com.meetup.indyscala
 
 package object mathlib {
-  def factorial(x: BigInt) = {
-    var acc: BigInt = 1
-    var i = x
-    while (i > 0) {
-      acc *= i
-      i -= 1
+  def factorial(x: BigInt): BigInt = {
+    x match {
+      case i if i == 0 => 1
+      case i => i * factorial(i - 1)
     }
-    acc
   }
 }
 
