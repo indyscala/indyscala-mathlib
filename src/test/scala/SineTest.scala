@@ -26,6 +26,10 @@ class SineTest extends FunSuite with ShouldMatchers with Checkers {
     check((x: Double) => abs(sin(x) - sin(x + 2 * Pi)) < 1e-3)
   }  
 
+  test("sin(x) == scala.math.sin(x)") {
+    check((x: Double) => abs(sin(x) - scala.math.sin(x)) < 1e-3)
+  }  
+
   ignore("-Pi <= normalizeRadians(x) <= Pi") {
     check((x: Double) => {
       val n = normalizeRadians(x)

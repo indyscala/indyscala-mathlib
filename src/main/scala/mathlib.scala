@@ -17,7 +17,7 @@ package object mathlib {
 
   def sin(r: Double): Double = {
     val norm = normalizeRadians(r)
-    norm - pow(norm, 3)/factorial(3).doubleValue + pow(norm,5)/factorial(5).doubleValue - pow(norm,7)/factorial(7).doubleValue
+    norm - pow(norm, 3)/factorial(3).doubleValue + pow(norm,5)/factorial(5).doubleValue - pow(norm,7)/factorial(7).doubleValue + pow(norm,9)/factorial(9).doubleValue - pow(norm,11)/factorial(11).doubleValue
   }
 
   def normalizeRadians(r: Double): Double = {
